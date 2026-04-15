@@ -5,3 +5,10 @@ I created a Product class to store details like name, price, and stock. I also a
 I worked on the part where the user can choose products. I used a while (true) loop so the user can keep buying items. Inside it, I displayed the menu and asked the user to pick a product and enter a quantity. I also checked if the input is valid using int.TryParse(), and made sure the product is not out of stock and the quantity is not too much. If there’s an error, it shows a message and goes back to the menu. This part helps make sure the user inputs are correct before adding items to the cart.
 # Day 3 
 On Day 3, I finished the rest of the program. I added the part where the selected items are added to the cart and the stock gets reduced. I also made sure that if the same product is chosen again, it just updates the quantity instead of adding a duplicate. I also decided to add 4 more items to the product list because I felt that 3 items were not enough for a store, so now there are 7 products in total. After that, I created the receipt part where all the items, quantities, and totals are displayed. I computed the grand total and added a 10% discount if the total is 5000 or more. Finally, I showed the final total and the updated stock after checkout.
+# Day 4
+I Created the flowchart and double checked my work
+
+I used AI to guide me with certain stuff that I was lost with, I used it to create examples that were similar in function so that I could learn about it. 
+Prompts I used were
+"Can you create an example of creating a class"
+"What went wrong here"
