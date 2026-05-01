@@ -17,3 +17,5 @@ I Created the flowchart and double checked my work
  the program more organized. I also used AI guidance to understand how to properly use arrays for
  storing cart quantities and totals. After applying the suggestions, I manually reviewed and adjusted
  the code to make sure it still fits the requirements and is easy to understand.
+
+
