@@ -11,11 +11,49 @@ namespace ShoppingCartQuiz2_3
 {
     class Product
     {
-        public int Id;
-        public string Name;
-        public string Category;
-        public double Price;
-        public int RemainingStock;
+        private int id;
+        private string name;
+        private string category;
+        private double price;
+        private int remainingStock;
+
+        public int Id
+        {
+            get { return id; }
+            set { id = value; }
+        }
+
+        public string Name
+        {
+            get { return name; }
+            set { name = value; }
+        }
+
+        public string Category
+        {
+            get { return category; }
+            set { category = value; }
+        }
+
+        public double Price
+        {
+            get { return price; }
+            set
+            {
+                if (value >= 0)
+                    price = value;
+            }
+        }
+
+        public int RemainingStock
+        {
+            get { return remainingStock; }
+            set
+            {
+                if (value >= 0)
+                    remainingStock = value;
+            }
+        }
 
         public void DisplayProduct()
         {
@@ -25,11 +63,10 @@ namespace ShoppingCartQuiz2_3
 
     class Order
     {
-        public int ReceiptNumber;
-        public double FinalTotal;
-        public DateTime Date;
+        public int ReceiptNumber { get; set; }
+        public double FinalTotal { get; set; }
+        public DateTime Date { get; set; }
     }
-
 
     internal class Program
     {
@@ -210,7 +247,6 @@ namespace ShoppingCartQuiz2_3
                     i--;
 
                     products[i].RemainingStock += cartQty[i];
-
                     cartQty[i] = 0;
                     cartTotal[i] = 0;
 
@@ -236,13 +272,11 @@ namespace ShoppingCartQuiz2_3
                         continue;
                     }
 
-                    // restore old stock first
                     products[i].RemainingStock += cartQty[i];
 
                     if (products[i].RemainingStock < newQty)
                     {
                         Console.WriteLine("Not enough stock.");
-                        // revert
                         products[i].RemainingStock -= cartQty[i];
                         continue;
                     }
@@ -355,6 +389,3 @@ namespace ShoppingCartQuiz2_3
         }
     }
 }
-
-
-
